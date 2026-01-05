@@ -93,4 +93,30 @@ If successfull you should see
 3. Right-click index.html
 4. Select ```Open with Live Server```
 
+### FAQ
+
+I keep getting this error ```EADDRINUSE: address already in use :::3000```
+Answer: That error means that port 3000 is being used by another application
+
+## Fix 1
+
+Open Terminal run
+```lsof -i :3000```
+
+You will output (exmaple) 
+
+```node   93528  chunk   ... TCP *:3000 (LISTEN)```
+
+You you need to kill that process.. 
+
+run ```kill -9 93528```
+(replace ```93528``` with your respected pod)
+
+## Fix 2 
+
+1. Open server.js
+2. Look for ```const PORT = 3000```
+3. Change the port number
+4. Save
+5. run node server.js
 
