@@ -72,11 +72,13 @@ Verify Node.js installation:
 **Clone Repo**
 
 ```git clone https://github.com/chunk082/canadian-crime-map.git```
+
 ```cd canadian-crime-map```
 
 **Install Backend Dependencies**
 
 ```cd server```
+
 ```npm install```
 
 **Start Node Server API**
